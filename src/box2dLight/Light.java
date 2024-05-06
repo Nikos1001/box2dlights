@@ -1,4 +1,4 @@
-package box2dLight;
+// package box2dLight;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
@@ -473,8 +473,8 @@ public abstract class Light implements Disposable {
 			if (ignoreBody && fixture.getBody() == getBody())
 				return -1;
 			
-			// if (fixture.isSensor())
-			// return -1;
+			if (fixture.isSensor())
+				return -1;
 			mx[m_index] = point.x;
 			my[m_index] = point.y;
 			f[m_index] = fraction;
